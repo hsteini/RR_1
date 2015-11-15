@@ -1,7 +1,7 @@
 Assessment 1
 =========================
 
-1. Loading and preprocessing the data
+Loading and preprocessing the data
 Show any code that is needed to
 Load the data (i.e. read.csv())
 Process/transform the data (if necessary) into a format suitable for your analysis
@@ -115,7 +115,7 @@ summary(df)
 ```
 
 ```r
-pairs(df)
+# pairs(df)
 tail(df)
 ```
 
@@ -137,7 +137,7 @@ dim(df)
 ## [1] 17568     3
 ```
 
-2. What is mean total number of steps taken per day?
+What is mean total number of steps taken per day?
 For this part of the assignment, you can ignore the missing values in the dataset.
 Calculate the total number of steps taken per day
 If you do not understand the difference between a histogram and a barplot, research the difference between them. Make a histogram of the total number of steps taken each day
@@ -176,13 +176,13 @@ steps_median <- median(df_new$steps)
         The median of the total number of steps taken each day is 0
 
 
-3. What is the average daily activity pattern?
+What is the average daily activity pattern?
 Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
 Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
 
 
-4. Imputing missing values
+Imputing missing values
 
 Note that there are a number of days/intervals where there are missing values (coded as NA). The presence of missing days may introduce bias into some calculations or summaries of the data.
 
@@ -234,7 +234,7 @@ steps_median_n <- median(df_n$steps)
         What is the impact of imputing missing data on the estimates of the total daily number of steps?
 
 
-5. Are there differences in activity patterns between weekdays and weekends?
+Are there differences in activity patterns between weekdays and weekends?
 
 For this part the weekdays() function may be of some help here. Use the dataset with the filled-in missing values for this part.
 

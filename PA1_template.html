@@ -203,12 +203,10 @@ hr {
 <body>
 <h1>Assessment 1</h1>
 
-<ol>
-<li>Loading and preprocessing the data
+<p>Loading and preprocessing the data
 Show any code that is needed to
 Load the data (i.e. read.csv())
-Process/transform the data (if necessary) into a format suitable for your analysis</li>
-</ol>
+Process/transform the data (if necessary) into a format suitable for your analysis</p>
 
 <pre><code class="r">library(knitr)
 library(dplyr)
@@ -328,7 +326,7 @@ summary(df)
 ##  NA&#39;s   :2304
 </code></pre>
 
-<pre><code class="r">pairs(df)
+<pre><code class="r"># pairs(df)
 tail(df)
 </code></pre>
 
@@ -347,13 +345,11 @@ tail(df)
 <pre><code>## [1] 17568     3
 </code></pre>
 
-<ol>
-<li>What is mean total number of steps taken per day?
+<p>What is mean total number of steps taken per day?
 For this part of the assignment, you can ignore the missing values in the dataset.
 Calculate the total number of steps taken per day
 If you do not understand the difference between a histogram and a barplot, research the difference between them. Make a histogram of the total number of steps taken each day
-Calculate and report the mean and median of the total number of steps taken per day</li>
-</ol>
+Calculate and report the mean and median of the total number of steps taken per day</p>
 
 <pre><code class="r"># Calculate the total number of steps taken per day
 
@@ -385,12 +381,11 @@ steps_median &lt;- median(df_new$steps)
     The median of the total number of steps taken each day is 0
 </code></pre>
 
-<ol>
-<li><p>What is the average daily activity pattern?
+<p>What is the average daily activity pattern?
 Make a time series plot (i.e. type = &ldquo;l&rdquo;) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
-Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?</p></li>
-<li><p>Imputing missing values</p></li>
-</ol>
+Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?</p>
+
+<p>Imputing missing values</p>
 
 <p>Note that there are a number of days/intervals where there are missing values (coded as NA). The presence of missing days may introduce bias into some calculations or summaries of the data.</p>
 
@@ -440,9 +435,7 @@ steps_median_n &lt;- median(df_n$steps)
     What is the impact of imputing missing data on the estimates of the total daily number of steps?
 </code></pre>
 
-<ol>
-<li>Are there differences in activity patterns between weekdays and weekends?</li>
-</ol>
+<p>Are there differences in activity patterns between weekdays and weekends?</p>
 
 <p>For this part the weekdays() function may be of some help here. Use the dataset with the filled-in missing values for this part.</p>
 
