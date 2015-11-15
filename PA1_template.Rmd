@@ -11,6 +11,9 @@ library(dplyr)
 library(ggplot2)
 library(plyr)
 library(doBy)
+library(knitr)
+
+knit2html("PA1_template.rmd")
 
 # 1.Load the data and 2.Process/transform the data (if necessary) into a format suitable for your analysis
 
@@ -132,15 +135,3 @@ Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minut
 ```
 
 
-BACKUP - not used:
-#
-df_test <- df
-df_test[,1][is.na(df_test[,1])] <- 0
-
-b <- summaryBy(steps ~ date, data = df_test, 
-          FUN = list(mean, max, min, median, sd))
-
-df_x <- df
-df_y <- group_by(df_x, date)
-
-df_x[,1][is.na(df_x[,1])] <- 9

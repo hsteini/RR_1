@@ -12,11 +12,70 @@ library(dplyr)
 library(ggplot2)
 library(plyr)
 library(doBy)
+library(knitr)
 
+knit2html("PA1_template.rmd")
+```
+
+```
+## 
+## 
+## processing file: PA1_template.rmd
+```
+
+```
+##   |                                                                         |                                                                 |   0%  |                                                                         |......                                                           |   9%
+##   ordinary text without R code
+## 
+##   |                                                                         |............                                                     |  18%
+## label: unnamed-chunk-6
+```
+
+```
+##   |                                                                         |..................                                               |  27%
+##   ordinary text without R code
+## 
+##   |                                                                         |........................                                         |  36%
+## label: unnamed-chunk-7
+```
+
+```
+##   |                                                                         |..............................                                   |  45%
+##    inline R code fragments
+## 
+##   |                                                                         |...................................                              |  55%
+## label: unnamed-chunk-8
+##   |                                                                         |.........................................                        |  64%
+##   ordinary text without R code
+## 
+##   |                                                                         |...............................................                  |  73%
+## label: unnamed-chunk-9
+```
+
+```
+##   |                                                                         |.....................................................            |  82%
+##    inline R code fragments
+## 
+##   |                                                                         |...........................................................      |  91%
+## label: unnamed-chunk-10
+##   |                                                                         |.................................................................| 100%
+##   ordinary text without R code
+```
+
+```
+## output file: PA1_template.md
+```
+
+```r
 # 1.Load the data and 2.Process/transform the data (if necessary) into a format suitable for your analysis
 
 # what is the working directory
 wd <- getwd()
+```
+
+![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1-1.png) 
+
+```r
 wd
 ```
 
@@ -57,11 +116,6 @@ summary(df)
 
 ```r
 pairs(df)
-```
-
-![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1-1.png) 
-
-```r
 tail(df)
 ```
 
@@ -190,15 +244,3 @@ Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minut
 
 
 
-BACKUP - not used:
-#
-df_test <- df
-df_test[,1][is.na(df_test[,1])] <- 0
-
-b <- summaryBy(steps ~ date, data = df_test, 
-          FUN = list(mean, max, min, median, sd))
-
-df_x <- df
-df_y <- group_by(df_x, date)
-
-df_x[,1][is.na(df_x[,1])] <- 9
