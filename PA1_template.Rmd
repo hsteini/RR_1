@@ -34,7 +34,7 @@ tail(df)
 dim(df)
 ```
 
-What is mean total number of steps taken per day?
+### What is mean total number of steps taken per day?
 For this part of the assignment, you can ignore the missing values in the dataset.
 Calculate the total number of steps taken per day
 If you do not understand the difference between a histogram and a barplot, research the difference between them. Make a histogram of the total number of steps taken each day
@@ -52,12 +52,12 @@ steps_mean <- mean(total_steps$steps)
 steps_median <- median(total_steps$steps)
 ```
 
-        The total number of steps per day is `r steps_sum`
-        The mean of the total number of steps taken each day is `r steps_mean`
-        The median of the total number of steps taken each day is `r steps_median`
+
+        The mean of the total number of steps taken each day is 10.766,188.
+        The median of the total number of steps taken each day is 10.765
 
 
-What is the average daily activity pattern?
+### What is the average daily activity pattern?
 Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
 Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -74,10 +74,10 @@ plot(row.names(df_neu1), df_neu1, type = "l", xlab = "5-min interval",
 max_interval <- which.max(df_neu1)
 names(max_interval)
 ```
-The 'r max_interval' interval, on average across all the days in the dataset, contains the maximum number of steps.
+The 835 interval, on average across all the days in the dataset, contains the maximum number of steps.
 
 
-Imputing missing values
+### Imputing missing values
 
 Note that there are a number of days/intervals where there are missing values (coded as NA). The presence of missing days may introduce bias into some calculations or summaries of the data.
 
@@ -113,10 +113,11 @@ steps_median_n <- median(total_steps_n$steps)
 
 ```
 
-        The total number of rows with NAs is `r number_not_complete_df`
-        The mean of the total number of steps taken each day is `r steps_mean_n`
-        The median of the total number of steps taken each day is `r steps_median_n`
+        The total number of rows with NAs is 2304
+        The mean of the total number of steps taken each day is 10.766,188
+        The median of the total number of steps taken each day is 10.766,188
         Do these values differ from the estimates from the first part of the assignment? 
+        Yes, they show a difference in the median. Fillin missing data changes the median.
 
        
 
