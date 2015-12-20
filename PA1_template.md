@@ -24,45 +24,48 @@ knit2html("PA1_template.rmd")
 ```
 
 ```
-##   |                                                                         |                                                                 |   0%  |                                                                         |......                                                           |   9%
+##   |                                                                         |                                                                 |   0%  |                                                                         |.....                                                            |   8%
 ##   ordinary text without R code
 ## 
-##   |                                                                         |............                                                     |  18%
-## label: unnamed-chunk-6
-```
-
-```
-##   |                                                                         |..................                                               |  27%
-##   ordinary text without R code
-## 
-##   |                                                                         |........................                                         |  36%
+##   |                                                                         |...........                                                      |  17%
 ## label: unnamed-chunk-7
 ```
 
 ```
-##   |                                                                         |..............................                                   |  45%
+##   |                                                                         |................                                                 |  25%
 ##   ordinary text without R code
 ## 
-##   |                                                                         |...................................                              |  55%
+##   |                                                                         |......................                                           |  33%
 ## label: unnamed-chunk-8
 ```
 
 ```
-##   |                                                                         |.........................................                        |  64%
+##   |                                                                         |...........................                                      |  42%
 ##   ordinary text without R code
 ## 
-##   |                                                                         |...............................................                  |  73%
+##   |                                                                         |................................                                 |  50%
 ## label: unnamed-chunk-9
 ```
 
 ```
-##   |                                                                         |.....................................................            |  82%
+##   |                                                                         |......................................                           |  58%
 ##   ordinary text without R code
 ## 
-##   |                                                                         |...........................................................      |  91%
+##   |                                                                         |...........................................                      |  67%
 ## label: unnamed-chunk-10
-##   |                                                                         |.................................................................| 100%
+```
+
+```
+##   |                                                                         |.................................................                |  75%
 ##   ordinary text without R code
+## 
+##   |                                                                         |......................................................           |  83%
+## label: unnamed-chunk-11
+##   |                                                                         |............................................................     |  92%
+##   ordinary text without R code
+## 
+##   |                                                                         |.................................................................| 100%
+## label: unnamed-chunk-12
 ```
 
 ```
@@ -242,13 +245,23 @@ steps_median_n <- median(total_steps_n$steps)
         The median of the total number of steps taken each day is 10.766,188
         Do these values differ from the estimates from the first part of the assignment? 
         Yes, they show a difference in the median. Fillin missing data changes the median.
+        Also the histograms are a little bit different.
 
        
 
 
-Are there differences in activity patterns between weekdays and weekends?
+### Are there differences in activity patterns between weekdays and weekends?
 
-### THIS exercise is missing - sorry!
+Create a new factor variable in the dataset with two levels - “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.
 
+```r
+df_days <- df
+df_days$weekday <- ifelse(weekdays(df_days$date) %in% c("Satuday", "Sunday"), 
+    "weekend", "weekday")
+```
+
+Make a panel plot containing a time series plot (i.e. type = “l”) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis)
+
+## Sorry - the plot is missing!
 
 
