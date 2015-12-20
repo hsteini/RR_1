@@ -42,25 +42,10 @@ Calculate and report the mean and median of the total number of steps taken per 
 
 ```{r}
 # Calculate the total number of steps taken per day
-#total_steps <- aggregate(steps ~ date, data = df, sum, na.rm = TRUE)
-total_steps <- aggregate(steps ~ date, data = df, sum)
-
+total_steps <- aggregate(steps ~ date, data = df, sum, na.rm = TRUE)
 
 # draw the histogram
 hist(total_steps$steps, main = " total steps by day", xlab ="day")
-
-with(total_steps, { 
-      par(oma=c(2,0,0,0), mar=c(6.75, 6.75, 3, 0), mgp=c(5.75, 0.75, 0), las=2)
-       barplot(
-                        height=steps,
-                        main="Total steps per day",
-                        xlab="Dates",
-                        ylab="steps per day",
-                          col="blue",
-                        names.arg=date,
-                        space=c(0)
-                        
-        )})
 
 # Calculate and report the mean and median of the total number of steps taken per day
 steps_mean <- mean(total_steps$steps)
